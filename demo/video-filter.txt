@@ -1,0 +1,10 @@
+[0:v]fps=30,format=yuv420p[title];
+[1:v]fps=30,setpts=PTS-STARTPTS[demo0];
+[demo0][4:v]overlay=0:0:enable='between(t,0,6)':shortest=1[demo1];
+[demo1][5:v]overlay=0:0:enable='between(t,6,15)':shortest=1[demo2];
+[demo2][6:v]overlay=0:0:enable='between(t,15,25)':shortest=1[demo3];
+[demo3][7:v]overlay=0:0:enable='between(t,25,38)':shortest=1[demo4];
+[demo4][8:v]overlay=0:0:enable='between(t,38,48.2)':shortest=1,format=yuv420p[demo];
+[2:v]fps=30,format=yuv420p[end];
+[title][demo][end]concat=n=3:v=1:a=0[v];
+[3:a]adelay=1500:all=1,volume=1.05,apad=pad_dur=4,atrim=0:60.2[a]

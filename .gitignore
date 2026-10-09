@@ -9,3 +9,5 @@ npm-debug.log*
 .pytest_cache/
 __pycache__/
 *.py[cod]
+demo/raw/
+demo/*.aiff

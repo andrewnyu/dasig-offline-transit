@@ -14,6 +14,15 @@ Occidental.[^hiligaynon]
 > a new spoken trip request and calculates a new multi-jeepney journey entirely
 > on the phone.
 
+## One-minute demo
+
+[Watch the Android emulator demo](demo/DASIG-1-minute-demo.mp4). It shows a
+new trip being entered and calculated while the emulator is in airplane mode,
+including local landmark matching, the downloaded Bacolod map, route and fare
+results, and on-device spoken instructions.
+
+![DASIG offline journey result](demo/DASIG-demo-poster.png)
+
 ## Why this exists
 
 Cloud-only journey planners fail precisely when riders may need them most:

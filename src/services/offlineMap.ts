@@ -1,6 +1,32 @@
 import {OfflineManager} from '@maplibre/maplibre-react-native';
 
-export const BACOLOD_MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
+export const BACOLOD_MAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
+export const BACOLOD_MAP_STYLE = {
+  version: 8 as const,
+  sources: {
+    openmaptiles: {
+      type: 'vector' as const,
+      url: 'https://tiles.openfreemap.org/planet',
+    },
+  },
+  layers: [
+    {id: 'background', type: 'background' as const, paint: {'background-color': '#f8f4f0'}},
+    {
+      id: 'water',
+      type: 'fill' as const,
+      source: 'openmaptiles',
+      'source-layer': 'water',
+      paint: {'fill-color': '#b9d9e8'},
+    },
+    {
+      id: 'roads',
+      type: 'line' as const,
+      source: 'openmaptiles',
+      'source-layer': 'transportation',
+      paint: {'line-color': '#d2c8bb', 'line-width': 1.2},
+    },
+  ],
+};
 export const BACOLOD_OFFLINE_PACK = 'dasig-bacolod-demo-v1';
 
 export interface MapDownloadProgress {
@@ -76,7 +102,7 @@ export async function downloadBacolodMap(
     OfflineManager.createPack(
       {
         name: BACOLOD_OFFLINE_PACK,
-        styleURL: BACOLOD_MAP_STYLE,
+        styleURL: BACOLOD_MAP_STYLE_URL,
         // North-east then south-west, matching MapLibre RN v10.
         bounds: [
           [123.1, 10.75],
