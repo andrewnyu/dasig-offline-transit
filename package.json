@@ -1,0 +1,43 @@
+{
+  "name": "dasig-offline-transit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "typecheck": "tsc --noEmit",
+    "test": "jest --runInBand",
+    "precheck": "npm run typecheck && npm test",
+    "android:build:debug": "cd android && ./gradlew assembleDebug",
+    "android:build:release": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@maplibre/maplibre-react-native": "^10.4.2",
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-native-community/geolocation": "^3.4.0",
+    "react": "18.3.1",
+    "react-native": "0.77.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.2",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native/babel-preset": "0.77.3",
+    "@react-native/metro-config": "0.77.3",
+    "@react-native/typescript-config": "0.77.3",
+    "@types/jest": "^29.5.13",
+    "@types/react": "^18.3.12",
+    "babel-jest": "^29.6.3",
+    "jest": "^29.6.3",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testPathIgnorePatterns": ["/node_modules/", "/android/"]
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+android/.gradle/
+android/app/build/
+android/build/
+*.keystore
+local.properties
+npm-debug.log*
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
