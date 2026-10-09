@@ -11,3 +11,5 @@ __pycache__/
 *.py[cod]
 demo/raw/
 demo/*.aiff
+demo/*.mp4
+demo/*.mp3

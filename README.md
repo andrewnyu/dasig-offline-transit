@@ -16,7 +16,7 @@ Occidental.[^hiligaynon]
 
 ## One-minute demo
 
-[Watch the Android emulator demo](demo/DASIG-1-minute-demo.mp4). It shows a
+The one-minute Android emulator demo shows a
 new trip being entered and calculated while the emulator is in airplane mode,
 including local landmark matching, the downloaded Bacolod map, route and fare
 results, and on-device spoken instructions.
@@ -288,6 +288,12 @@ Raw audio and transcripts are not persisted or sent to analytics.
 | Optional location | React Native Community Geolocation |
 | Pack publication | Included FastAPI publisher, canonical GeoJSON, SHA-256 and ETag |
 | Route data | Bundled Bacolod dataset assembled from cited public sources, including OpenStreetMap-derived geometry |
+
+## Install the demo APK
+
+Download `app-release.apk` from the
+[latest GitHub release](https://github.com/andrewnyu/dasig-offline-transit/releases/latest)
+and install it on an Android 12+ phone.
 
 ## Run the development build
 
