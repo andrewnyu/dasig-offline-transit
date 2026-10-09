@@ -21,7 +21,7 @@ new trip being entered and calculated while the emulator is in airplane mode,
 including local landmark matching, the downloaded Bacolod map, route and fare
 results, and on-device spoken instructions.
 
-![DASIG offline journey result](../demo/DASIG-demo-poster.png)
+<img src="../demo/DASIG-demo-poster.png" alt="DASIG offline journey result" width="280">
 
 ## Why this exists
 
