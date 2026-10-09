@@ -291,7 +291,7 @@ Raw audio and transcripts are not persisted or sent to analytics.
 
 ## Install the demo APK
 
-Download `app-release.apk` from the
+Download the APK from the
 [latest GitHub release](https://github.com/andrewnyu/dasig-offline-transit/releases/latest)
 and install it on an Android 12+ phone.
 
